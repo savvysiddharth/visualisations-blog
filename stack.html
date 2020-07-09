@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stack</title>
+    <script src="lib/js/jquery-3.3.1.min.js"></script>
+    <script src="lib/js/popper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/p5.min.js"></script>
+    <script src="lib/js/p5.dom.min.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <script src="scripts/stack.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="styles/customStyle.css">
+</head>
+
+<body>
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#"><span class="web-title">theVisualisationsBlog</span></a>
+  </nav> -->
+
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><span class="web-title">theVisualisationsBlog</span></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="stack.html">Stack</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="linsearch.html">Linear search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bubblesort.html">Bubble sort</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="oddeven.html">Odd even sort</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="astar.html">A* search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="neuroevolve.html">Neuroevolution</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Stack</h2>
+    <ul>
+      <li>Stack is a LIFO (Last In First Out) based data structure. Imagine a queue where whoever enters last has to go out first.</li>
+      <li>There are 2 kinds of operation that you can do on stack.
+        <ol>
+          <li>Push</li>
+          <li>Pop</li>
+        </ol>
+      </li>
+      <li>
+        <b>Push</b> means element is entering into or <b>pushing into</b> the stack.
+      </li>
+      <li>
+        <b>Pop</b> means element is getting out or <b>popping out</b> of the stack.
+      </li>
+    </ul>
+    <hr>
+    <h3>Use this little tool to understand it clearer...</h3>
+    <p>Go ahead, enter some number in input box and hit push, then try pop and see what happens..</p>
+
+    <div class="row">
+      <div class="col-8">
+        <div id="stacksketch"></div>
+      </div>
+      <div class="col-4">
+        <div class="row">
+          <input class="input-box" type="text" id="pushdata" placeholder="Enter data here..">
+        </div>
+        <div class="row">
+          <div class="controls">
+            <button class="btn btn-info" onclick="pushVal()">Push</button>
+            <button class="btn btn-info" onclick="popTop()">Pop</button>
+          </div>          
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+
+    <p>This kind of data structure is very helpful for various kind of applications, for example in path searching algorithm, whenever you find a good node to select, you push it into the stack, now at end when you reach goal node, you want to know the path you followed, for this you'll pop out element one by one that'll make your path, this process is called back tracking.
+    </p>
+    <hr>
+
+    <a href="index.html"><button class="btn btn-info">Go back to home</button></a>
+  </div>
+</body>
+</html>

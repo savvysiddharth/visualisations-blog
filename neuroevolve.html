@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Neuroevolution</title>
+
+    <script src="lib/js/jquery-3.3.1.min.js"></script>
+    <script src="lib/js/popper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/p5.min.js"></script>
+    <script src="lib/js/p5.dom.min.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+
+    <script src = "scripts/ne/lib/miniANN/matrix.js" type="text/javascript"></script>
+    <script src = "scripts/ne/lib/miniANN/mini-ann.js?v=1.1" type="text/javascript"></script>
+
+    <script src = "scripts/ne/src/gen.js?v=1.1" type="text/javascript"></script>
+    <script src = "scripts/ne/src/world.js" type="text/javascript"></script>
+    <script src = "scripts/ne/src/ball.js?v=1.1" type="text/javascript"></script>
+    <script src = "scripts/ne/src/barGroup.js" type="text/javascript"></script>
+    <script src = "scripts/ne/src/game.js?v=1.1" type="text/javascript"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="styles/customStyle.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><span class="web-title">theVisualisationsBlog</span></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="stack.html">Stack</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="linsearch.html">Linear search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bubblesort.html">Bubble sort</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="oddeven.html">Odd even sort</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="astar.html">A* search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="neuroevolve.html">Neuroevolution</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Neuroevolution</h2>
+    <ul>
+      <li>Genetic algorithm on ANN (Artificial neural networks) </li>
+      <li>Algorithm :
+        <ol>
+          <li>Population of ANN is generated</li>
+          <li>After end of their performance, their fitness is calculated</li>
+          <li>Natural selection occurs based on fitness score probabilistically</li>
+          <li>Selected ones go through crossover to generate new offspring</li>
+          <li>Offspring is mutated</li>
+          <li>After multiple crossover, a new generation is created..we are back to step 1</li>
+        </ol>
+      </li>
+    </ul>
+
+    <hr>
+
+    <p>
+      Go try <a target="_blank" href="https://savvysiddharth.github.io/escape-jump/">escape-jump</a> game now (<a target="_blank" href="https://github.com/savvysiddharth/escape-jump/blob/master/README.md">controls for game</a>), and then see this neuroevolution algorithm learn to play this game.
+    </p>
+
+
+    <br>
+    <div class="row">
+      <div class="col-sm-8"><div id="nesketch"></div></div>
+      <div class="col-sm-4">
+        <div class="row">
+            <button onclick="location.reload()" class="btn btn-info" style="margin:auto">restart</button>
+        </div>
+        <br>
+        <div class="row">
+          <div style="margin:auto">
+            <button onclick="spdec()" class="btn btn-info">speed -</button>
+            <button onclick="spinc()" class="btn btn-info" >speed +</button>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+            <div style="margin:auto">
+              <button onclick="ANIMATION_SPEED = 1;" class="btn btn-info">reset speed</button>
+            </div>
+        </div>
+        <br>
+      </div>
+    </div>
+    <hr>
+
+    <a href="index.html"><button class="btn btn-info">Go back to home</button></a>
+  </div>
+</body>
+<script>
+  function spdec() {
+    if(ANIMATION_SPEED >1) {
+      ANIMATION_SPEED--;
+    }
+  }
+
+  function spinc() {
+    ANIMATION_SPEED++;
+  }
+</script>
+</html>

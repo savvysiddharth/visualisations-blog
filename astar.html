@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>A* Search</title>
+
+    <script src="lib/js/jquery-3.3.1.min.js"></script>
+    <script src="lib/js/popper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/p5.min.js"></script>
+    <script src="lib/js/p5.dom.min.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+
+    <script src="scripts/astar.js?v=0.2" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="styles/customStyle.css">
+
+    <style type="text/css">
+      @font-face {
+        font-family: GidoleRegular;
+        src: url(../fonts/Gidole-Regular.ttf);
+      }
+
+      body * {
+        font-family: GidoleRegular;
+      }
+    </style>
+</head>
+
+<style type="text/css">
+
+</style>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><span class="web-title">theVisualisationsBlog</span></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="stack.html">Stack</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="linsearch.html">Linear search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bubblesort.html">Bubble sort</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="oddeven.html">Odd even sort</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="astar.html">A* search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="neuroevolve.html">Neuroevolution</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>A* search</h2>
+    <ul>
+    </ul>
+
+    <hr>
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div id="sketchbox"></div>
+      </div>
+      <div class="col-lg-4">
+        <button id="playbtn" class="btn btn-info" onclick="playPause(this)">Pause</button> <button class="btn btn-info" onclick="resetSketch()">Reset</button>
+        <br><br>
+        <h4>Things :</h4>
+        <ul>
+          <li><b>White dots</b> : unexplored nodes</li>
+          <li><b>Green dots</b> : nodes in openset</li>
+          <li><b>Red dots</b> : nodes in closedset</li>
+          <li><b>Black box</b> : obstacle in map</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+    <a href="index.html"><button class="btn btn-info">Go back to home</button></a>
+  </div>
+</body>
+</html>

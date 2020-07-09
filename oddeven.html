@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Odd even sort</title>
+
+    <script src="lib/js/jquery-3.3.1.min.js"></script>
+    <script src="lib/js/popper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/p5.min.js"></script>
+    <script src="lib/js/p5.dom.min.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+
+    <script src="scripts/oddeven.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="styles/customStyle.css">
+</head>
+
+<style type="text/css">
+
+</style>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><span class="web-title">theVisualisationsBlog</span></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="stack.html">Stack</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="linsearch.html">Linear search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bubblesort.html">Bubble sort</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="oddeven.html">Odd even sort</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="astar.html">A* search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="neuroevolve.html">Neuroevolution</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Odd even sort</h2>
+    <ul>
+      <li>It's another simple sorting algorithm.</li>
+      <li>How it works ?
+        <ul>
+          <li>
+            This algorithm was primarily designed with parallel machine in mind, because directly running bubble sort on parallel machine doesn't make sense, as bubble sort is sequential sorting algorithm, we can't simply divide works in different cpus. So, we have to modify this algorithm such a way that we can have sorting task run in parallal cpus, and as a result we get odd even sort.
+          </li>
+          <li>
+            This algorithm has 2 phases,
+            <ol>
+              <li>Odd phase</li>
+              <li>Even phase</li>
+            </ol>
+          </li>
+          <li>
+            Imagine we have array of <strong>n</strong> unsorted numbers, <br>
+            <h5><strong>Odd phase</strong></h5>
+            In odd phase, numbers at odd index will be compared to their previous element (if exist) <br>
+            So, here (<strong>index 1</strong> and index 0) will be compared along with (<strong>index 3</strong> and index 2) and so on...<br>
+            and they will be swapped if based on comparision result just like bubble sort.
+            <h5><strong>Even phase</strong></h5>
+            In even phase, numbers at even index will be compared to their previous element (if exist) <br>
+            So, here (<strong>index 2</strong> and index 1) will be compared along with (<strong>index 4</strong> and index 3) and so on...<br>
+            and they will be swapped if based on comparision result just like bubble sort.
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <hr>
+
+    <hr>
+    <h3>Use this interactive animation to understand it better...</h3>
+    <p>Go ahead, enter a list of numbers separated by commas,</p>
+    <input class="input-box" type="text" id="nums" placeholder="enter list of numbers"> <button class="btn btn-info" onclick="sortInput()">Sort</button> <button class="btn btn-info" onclick="playPause()">Play/Pause</button>
+    <br><br>
+    <div id="sketchbox"></div>
+    ( This animation mimics parallel behaviour )
+    <hr>
+
+
+    <p>
+      Why this can be used for parallel machine is probably understood by animation, as we can see that now comparisons of numbers in one phase can be done simultaneously and it swap numbers without affecting further sequence of algorithm unlike bubble sort.
+    </p>
+    <a href="index.html"><button class="btn btn-info">Go back to home</button></a>
+  </div>
+</body>
+</html>

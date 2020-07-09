@@ -1,0 +1,79 @@
+*{
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: GidoleRegular;
+  src: url(fonts/Gidole-Regular.ttf);
+}
+
+body {
+  background-image: url(./abstract.jpg); /* Image credits : @byrawpixel (Instagram) */
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+body * {
+  font-family: GidoleRegular;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 100px;
+  margin: 10px;
+}
+.container {
+  margin-top: 2%;
+}
+
+.bg-dark {
+  background-color: rgba(0,0,0,0.9) !important;
+}
+
+.navbar-brand {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+.container {
+  margin: 85px auto 10px auto !important;
+  background-color: rgba(0,0,0,0.9);
+  padding: 30px;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.web-title {
+  letter-spacing: 5px;
+}
+
+.index-list {
+  list-style: none;
+  padding: 0;
+}
+
+.fadeIn {
+  animation-delay: 0.5s;
+}
+
+.card {
+  background-color: rgba(0,0,0,0.5);
+  display: inline-block;
+  margin : 4px 0px 4px 0px;
+  border-radius: 15px;
+}
+
+.content-desktop {
+  display: block;
+}
+
+.content-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .content-desktop {display: none;}
+  .content-mobile {display: block;}
+}

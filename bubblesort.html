@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bubble Sort</title>
+    <script src="lib/js/jquery-3.3.1.min.js"></script>
+    <script src="lib/js/popper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/p5.min.js"></script>
+    <script src="lib/js/p5.dom.min.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+
+    <script src="scripts/bbleSort.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="styles/customStyle.css">
+</head>
+
+<style type="text/css">
+
+</style>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><span class="web-title">theVisualisationsBlog</span></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="stack.html">Stack</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="linsearch.html">Linear search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bubblesort.html">Bubble sort</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="oddeven.html">Odd even sort</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="astar.html">A* search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="neuroevolve.html">Neuroevolution</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Bubble sort</h2>
+    <ul>
+      <li>A very basic way to sort numbers in ascending or descending order</li>
+      <li>How it works ?
+        <ul>
+          <li>Now imagine an unsorted array of N items. Now we want to sort it ascending order. We will start with comparing first 2 elements, if first element is larger than second, we will swap this 2 elements or else we will go on comapring second and third element, here we will do same thing till second last and last element. So that was one iteration, we may have to go N iterations of this.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <hr>
+
+    <h3>Pseudocode</h3>
+    <!-- Pseudocode from https://en.wikipedia.org/wiki/Bubble_sort#Pseudocode_implementation -->
+    <code>
+      <pre class="code-block">
+      procedure bubbleSort(A : list of sortable items )
+          n = length(A)
+          repeat
+              swapped = false
+              for i = 1 to n-1 inclusive do
+                  /* if this pair is out of order */
+                  if A[i-1] > A[i] then
+                      /* swap them and remember something changed */
+                      swap( A[i-1], A[i] )
+                      swapped = true
+                  end if
+              end for
+          until not swapped
+      end procedure
+      </pre>
+    </code>
+
+    <hr>
+    <h3>Use this interactive animation to understand it better...</h3>
+    <p>Go ahead, enter a list of numbers separated by commas (eg : 9,8,7,6,5,4,3,2,1 ) and click sort..</p>
+    <p>( Note : Sorting here in ascending order )</p>
+
+    <input class="input-box" type="text" id="nums" placeholder="Enter a list of numbers"> <button class="btn btn-info" onclick="sortInput()">Sort</button> <button class="btn btn-info" onclick="playPause()">Play/Pause</button>
+    <br><br>
+    <div id="sketchbox"></div>
+    <button class="btn btn-info" style="display:none" id="resetbutton" onclick="resetSketch()">Reset</button>
+    <hr>
+
+
+    <p>
+      Bubble sort is very simple search algorithm, but surely not very time efficient for large lists, as it's worst time complexity is O( N<sup>2</sup> ).
+    </p>
+    <a href="index.html"><button class="btn btn-info">Go back to home</button></a>
+  </div>
+</body>
+</html>

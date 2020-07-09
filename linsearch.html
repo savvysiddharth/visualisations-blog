@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linear Search</title>
+    <script src="lib/js/jquery-3.3.1.min.js"></script>
+    <script src="lib/js/popper.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/p5.min.js"></script>
+    <script src="lib/js/p5.dom.min.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+
+    <script src="scripts/linsearch.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="styles/customStyle.css">
+</head>
+
+<style type="text/css">
+  
+</style>
+<body>
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#"><span class="web-title">theVisualisationsBlog</span></a>
+  </nav> -->
+
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><span class="web-title">theVisualisationsBlog</span></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="stack.html">Stack</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="linsearch.html">Linear search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bubblesort.html">Bubble sort</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="oddeven.html">Odd even sort</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="astar.html">A* search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="neuroevolve.html">Neuroevolution</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Linear Search</h2>
+    <ul>
+      <li>This algorithm is used to find a key item linearly from the list of many items.</li>
+      <li>What does it mean by "linear" search ?
+        <ul>
+          <li>we know that arrays are stored in memory in linear fashion, which means consecutive elements are actually stored next to each other. So when we want to search a item from this array, algorithm starts from first element and compares it with our key item, and then goes on next consecutive element till key element is found or list ends.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <hr>
+
+    <h3>Pseudocode</h3>
+    <!-- Pseudocode from https://www.tutorialspoint.com/data_structures_algorithms/linear_search_algorithm.htm -->
+    <code>
+      <pre class="code-block">
+      procedure linear_search (list, value)
+        for each item in the list
+          if match item == value
+              return the item's location
+          end if
+        end for
+      end procedure
+      </pre>
+    </code>
+
+    <hr>
+    <h3>Use this animation to understand it better...</h3>
+    <p>Go ahead, enter a key item to search from given list, and later you can try enter your own list and search your desired item</p>
+
+    <input class="input-box" type="text" id="searchbox" placeholder="Enter key item to search">
+    <button class="btn btn-info" id="searchbutton" onclick="searchNow()">Search</button>
+    <br><br>
+    <div id="sketchbox"></div>
+    <br>
+    <input class="input-box" style="width:60%" type="text" id="newlist" placeholder="Enter new list items separated by commas">
+    <button class="btn btn-info" onclick="addNewList()">Add new list</button>
+    <hr>
+    <p>
+      Linear search is very simple and basic kind of search algorithm. It's time complexity is O(N). So, for very minor search tasks this may be used, but it cannot be used for large real world search problems. For a better search algorithm we can see Binary Search algoritm whose time complexity is O(log N) which is comparatively much better than linear search but adds the overhead of sorting the data.
+    </p>
+    <a href="index.html"><button class="btn btn-info">Go back to home</button></a>
+  </div>
+</body>
+</html>

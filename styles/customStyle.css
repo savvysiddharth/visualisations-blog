@@ -1,0 +1,85 @@
+*{
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: GidoleRegular;
+  src: url(./fonts/Gidole-Regular.ttf);
+}
+
+body {
+  background-image: url(./abstract.jpg); /* Image credits : @byrawpixel (Instagram) */
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+body * {
+  font-family: GidoleRegular;
+}
+.btn {
+  padding: 7px 20px;
+  border-radius: 100px;
+  margin: 5px;
+}
+.container {
+  margin-top: 2%;
+}
+
+.bg-dark {
+  background-color: rgba(0,0,0,0.9) !important;
+}
+
+.navbar-brand {
+  position: absolute;
+  left : 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  text-align: center;
+  display: inline-block;
+}
+
+.container {
+  margin: 70px auto 10px auto !important;
+  background-color: rgba(0,0,0,0.9);
+  padding: 30px;
+  border-radius: 10px;
+  width: 65%;
+}
+
+.web-title {
+  letter-spacing: 5px;
+}
+
+.index-list {
+  list-style: none;
+  padding: 0;
+}
+
+.controls {
+  margin: 5px;  
+}
+
+.input-box {
+  border-radius: 100px;
+  padding: 7px;
+  outline: none;
+  border-color: rgba(0,0,0,0);
+}
+
+.code-block {
+  color: lightpink;
+  font-size: 14px;
+  font-family: monospace !important;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .web-title {
+    letter-spacing: 1px;
+  }
+
+  .container {
+    width: 95%;
+  }
+}
